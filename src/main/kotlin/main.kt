@@ -80,7 +80,7 @@ fun main() {
   val address = "http://$host:$port"
   println("=============================================")
   println("")
-  println("Server is started at $address")
+  println("The Manderbrot renderer is started at $address")
   println("")
   println("Open the following in a browser")
   println("  $address/mandelbrot")
