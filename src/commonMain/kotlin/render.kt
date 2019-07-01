@@ -27,7 +27,7 @@ object MandelbrotRender {
             return@run pickColor(z, iterations)
           }
         }
-        Color.BLACK
+        Colors.BLACK
       }
 
       image.putPixel(p, color)
