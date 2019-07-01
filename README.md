@@ -11,7 +11,9 @@ You can find the code for the hands-on lab on [Introduction to Kotlin Multiplatf
 We use Git Branches to separate different steps of the tutorial. Please check `step-NNN` branches for more details:
 
 - `step-001` branch contains the basic Kotlin/JVM + [Ktor](https://ktor.io) server application
-
-
-
+- `step-002` kotlin Multiplatform project
+- `step-003` JS target to render HTML
+- `step-004` common code to share a constant
+- `step-005` rendering code in the common source set, JVM works
+- `step-006` putting all together, rendering both in JS and JVM
 
