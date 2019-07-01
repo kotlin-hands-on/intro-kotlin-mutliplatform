@@ -5,3 +5,7 @@
 
 You can find the code for the hands-on lab on [Introduction to Kotlin Multiplatform](https://github.com/kotlin-hands-on/hands-on/Introduction%20to%20Kotlin%20Multiplatform)
 
+# Running 
+
+Call `./gradlew run` or `gradlew.bat run`
+
