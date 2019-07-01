@@ -13,5 +13,3 @@ backend
 Call `./gradlew jsRun` to start the JavaScript client-side
 application
 
-NOTE, the JS task is broken in this branch, please use `step-006`
-
