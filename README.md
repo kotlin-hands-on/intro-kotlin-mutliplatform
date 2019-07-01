@@ -3,5 +3,5 @@
 
 # Introduction to Kotlin Multiplatform
 
-You can find the code for the hands-on lab on [GitHub](https://github.com/kotlin-hands-on/hands-on/Introduction%20to%20Kotlin%20Multiplatform)
+You can find the code for the hands-on lab on [Introduction to Kotlin Multiplatform](https://github.com/kotlin-hands-on/hands-on/Introduction%20to%20Kotlin%20Multiplatform)
 
