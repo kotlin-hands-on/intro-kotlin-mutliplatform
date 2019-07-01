@@ -7,5 +7,11 @@ You can find the code for the hands-on lab on [Introduction to Kotlin Multiplatf
 
 # Running 
 
-Call `./gradlew run` or `gradlew.bat run`
+Call `./gradlew run` or `gradlew.bat run` to start the JVM
+backend
+
+Call `./gradlew jsRun` to start the JavaScript client-side
+application
+
+
 
