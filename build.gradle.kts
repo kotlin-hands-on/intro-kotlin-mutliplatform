@@ -4,6 +4,9 @@ plugins {
 
 kotlin {
   jvm()
+  js {
+    browser()
+  }
 }
 
 repositories {
@@ -13,6 +16,11 @@ repositories {
 
 val ktorVersion = "1.2.2"
 val logbackVersion = "1.2.3"
+
+kotlin.sourceSets["jsMain"].dependencies {
+  implementation(kotlin("stdlib-js"))
+  implementation("org.jetbrains.kotlinx:kotlinx-html-js:0.6.12")
+}
 
 kotlin.sourceSets["jvmMain"].dependencies {
   implementation(kotlin("stdlib-jdk8"))
