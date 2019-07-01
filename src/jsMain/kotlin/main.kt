@@ -4,7 +4,7 @@ import kotlinx.html.dom.append
 import kotlinx.html.js.*
 import kotlin.browser.document
 
-const val jvmBackend = "http://127.0.0.1:8888"
+const val jvmBackend = "http://$jvmHost:$jvmPort"
 
 fun main() {
   document.getElementById("app")

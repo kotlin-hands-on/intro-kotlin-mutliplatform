@@ -29,8 +29,8 @@ fun ApplicationCall.paramDouble(name: String, def: Double) = param(name, { toDou
 fun ApplicationCall.paramBoolean(name: String, def: Boolean = false) = param(name, { toBoolean() }, def)
 
 fun main() {
-  val host = "127.0.0.1"
-  val port = 8888
+  val host = jvmHost
+  val port = jvmPort
 
   val server = embeddedServer(Netty, host = host, port = port) {
     install(DefaultHeaders)
