@@ -1,5 +1,9 @@
 plugins {
-  kotlin("jvm") version "1.3.40"
+  kotlin("multiplatform") version "1.3.40"
+}
+
+kotlin {
+  jvm()
 }
 
 repositories {
@@ -10,7 +14,7 @@ repositories {
 val ktorVersion = "1.2.2"
 val logbackVersion = "1.2.3"
 
-dependencies {
+kotlin.sourceSets["jvmMain"].dependencies {
   implementation(kotlin("stdlib-jdk8"))
   implementation("io.ktor:ktor-server-netty:$ktorVersion")
   implementation("io.ktor:ktor-html-builder:$ktorVersion")
@@ -19,12 +23,15 @@ dependencies {
 
 val run by tasks.creating(JavaExec::class) {
   group = "application"
-  dependsOn(tasks.classes)
   main = "com.jetbrains.handson.introMpp.MainKt"
-  classpath(
-          { sourceSets["main"].output },
-          { configurations.runtimeClasspath }
-  )
+  kotlin {
+    val main = targets["jvm"].compilations["main"]
+    dependsOn(main.compileAllTaskName)
+    classpath(
+            { main.output.allOutputs.files },
+            { configurations["jvmRuntimeClasspath"] }
+    )
+  }
   ///disable app icon on macOS
   systemProperty("java.awt.headless", "true")
 }
