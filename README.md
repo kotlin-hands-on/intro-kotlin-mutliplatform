@@ -8,6 +8,10 @@ You can find the code for the hands-on lab on [Introduction to Kotlin Multiplatf
 
 # Branches
 
-We use Git Branches to separate different steps of the tutorial. Please check `step-NNN` branches for more details
+We use Git Branches to separate different steps of the tutorial. Please check `step-NNN` branches for more details:
+
+- `step-001` branch contains the basic Kotlin/JVM + [Ktor](https://ktor.io) server application
+
+
 
 
