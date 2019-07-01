@@ -1,6 +1,5 @@
 package com.jetbrains.handson.introMpp
 
-import java.awt.Color
 
 interface FractalImage {
   val pixelRect: Rect<Int>
