@@ -1,15 +1,15 @@
 package com.jetbrains.handson.introMpp
 
 data class Pixel(
-  val x: Int,
-  val y: Int
+        val x: Int,
+        val y: Int
 )
 
 data class Rect<T>(
-  val left: T,
-  val top: T,
-  val right: T,
-  val bottom: T
+        val left: T,
+        val top: T,
+        val right: T,
+        val bottom: T
 )
 
 /**
@@ -17,8 +17,8 @@ data class Rect<T>(
  * coordinates and integer image coordinates
  */
 class Transformation(
-  val pixelRect: Rect<Int>,
-  val fractalRect: Rect<Double>
+        val pixelRect: Rect<Int>,
+        val fractalRect: Rect<Double>
 )
 
 inline fun Transformation.forEachPixel(action: (Pixel, Complex) -> Unit) {

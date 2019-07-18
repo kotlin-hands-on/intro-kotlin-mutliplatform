@@ -1,7 +1,9 @@
 package com.jetbrains.handson.introMpp
 
 import kotlinx.html.dom.append
-import kotlinx.html.js.*
+import kotlinx.html.js.h1
+import kotlinx.html.js.h2
+import kotlinx.html.js.img
 import kotlin.browser.document
 
 const val jvmBackend = "http://127.0.0.1:8888"
