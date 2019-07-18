@@ -18,12 +18,14 @@ object MandelbrotRender {
       var z = Complex.ZERO
       var iterations = 0
 
+      // performs the building of the fractal.
+      // see https://en.wikipedia.org/wiki/Mandelbrot_set
       val color = run {
         repeat(maxIterations) {
           z = z * z + c
           iterations++
           if (z.mod2 > 4) {
-            //stop repeat{} function and return the color from run{}
+            //stops repeat{} function and return the color from run{}
             return@run pickColor(z, iterations)
           }
         }
