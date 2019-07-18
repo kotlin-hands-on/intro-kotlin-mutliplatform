@@ -10,6 +10,6 @@ You can find the code for the hands-on lab on [Introduction to Kotlin Multiplatf
 Call `./gradlew run` or `gradlew.bat run` to start the JVM
 backend
 
-Call `./gradlew jsRun` to start the JavaScript client-side
+Call `./gradlew jsRun` or `gradlew.bat jsRun` to start the JavaScript client-side
 application
 
