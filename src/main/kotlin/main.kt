@@ -32,6 +32,7 @@ fun main() {
   val host = "127.0.0.1"
   val port = 8888
 
+  // Ktor HTTP server startup
   val server = embeddedServer(Netty, host = host, port = port) {
     install(DefaultHeaders)
     install(CallLogging)
@@ -61,6 +62,8 @@ fun main() {
         println("Rendering image! $width x $height: $rect, jvm=$jvm")
 
         val img = BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB)
+
+        //rendering the Mandelbrot set
         MandelbrotRender.justRender(
                 image = FractalGraphics(img),
                 maxIterations = 1_000,
@@ -80,7 +83,7 @@ fun main() {
   val address = "http://$host:$port"
   println("=============================================")
   println("")
-  println("The Manderbrot renderer is started at $address")
+  println("The Mandelbrot renderer is started at $address")
   println("")
   println("Open the following in a browser")
   println("  $address/mandelbrot")
