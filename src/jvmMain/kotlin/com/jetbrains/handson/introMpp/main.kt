@@ -21,8 +21,7 @@ import kotlinx.html.img
 import java.awt.image.BufferedImage
 
 
-private inline fun <T : Any> ApplicationCall.param(name: String, convert: String.() -> T?, def: T) = request.queryParameters[name]?.convert()
-        ?: def
+private inline fun <T : Any> ApplicationCall.param(name: String, convert: String.() -> T?, def: T) = request.queryParameters[name]?.convert() ?: def
 
 fun ApplicationCall.paramInt(name: String, def: Int) = param(name, { toIntOrNull() }, def)
 fun ApplicationCall.paramDouble(name: String, def: Double) = param(name, { toDoubleOrNull() }, def)
@@ -80,7 +79,7 @@ fun main() {
   val address = "http://$host:$port"
   println("=============================================")
   println("")
-  println("The Manderbrot renderer is started at $address")
+  println("The Mandelbrot renderer is started at $address")
   println("")
   println("Open the following in a browser")
   println("  $address/mandelbrot")

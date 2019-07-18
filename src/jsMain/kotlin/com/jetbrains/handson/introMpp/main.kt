@@ -2,7 +2,10 @@ package com.jetbrains.handson.introMpp
 
 import kotlinx.html.dom.append
 import kotlinx.html.id
-import kotlinx.html.js.*
+import kotlinx.html.js.canvas
+import kotlinx.html.js.h1
+import kotlinx.html.js.h2
+import kotlinx.html.js.img
 import org.w3c.dom.HTMLCanvasElement
 import kotlin.browser.document
 
