@@ -5,10 +5,21 @@ import java.awt.Color
 import kotlin.math.ln
 
 fun pickColor(z: Complex, iterations: Int): Color {
+  //we use the number of iterations and the log log
+  // absolute value of the point to compute the color
   val s = iterations + 1 - ln(ln(z.mod2) / 2.0) / ln(2.0)
   return hslToRGB(30f + 10 * s.toFloat(), 90f, 50f)
 }
 
+/**
+ * The function to convert an HSL color coordinate into RGB.
+ * Check out https://en.wikipedia.org/wiki/HSL_and_HSV for more details.
+ *
+ * The HSL uses cylindrical coordinate system, where the
+ * [hh] parameter denotes an angle, so that one does `% 360f`.
+ * We use that fact to generate smooth color colors from
+ * the number of iterations
+ */
 private fun hslToRGB(hh: Float, ss: Float, ll: Float): Color {
   //inspired by http://www.camick.com/java/source/HSLColor.java
   val h = (hh % 360f) / 360f

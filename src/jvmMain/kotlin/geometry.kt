@@ -13,6 +13,10 @@ data class Rect<T>(
   val bottom: T
 )
 
+/**
+ * Transformation between 2D space of the Mandelbrot fractal
+ * coordinates and integer image coordinates
+ */
 class Transformation(
   val pixelRect: Rect<Int>,
   val fractalRect: Rect<Double>
