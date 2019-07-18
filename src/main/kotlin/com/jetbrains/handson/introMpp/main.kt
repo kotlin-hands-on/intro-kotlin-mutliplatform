@@ -21,8 +21,7 @@ import kotlinx.html.img
 import java.awt.image.BufferedImage
 
 
-private inline fun <T : Any> ApplicationCall.param(name: String, convert: String.() -> T?, def: T) = request.queryParameters[name]?.convert()
-        ?: def
+private inline fun <T : Any> ApplicationCall.param(name: String, convert: String.() -> T?, def: T) = request.queryParameters[name]?.convert() ?: def
 
 fun ApplicationCall.paramInt(name: String, def: Int) = param(name, { toIntOrNull() }, def)
 fun ApplicationCall.paramDouble(name: String, def: Double) = param(name, { toDoubleOrNull() }, def)
@@ -33,6 +32,7 @@ fun main() {
   val port = 8888
 
   // Ktor HTTP server startup
+  // see https://ktor.io for more details
   val server = embeddedServer(Netty, host = host, port = port) {
     install(DefaultHeaders)
     install(CallLogging)
