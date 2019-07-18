@@ -1,4 +1,3 @@
-@file:Suppress("NonAsciiCharacters")
 package com.jetbrains.handson.introMpp
 
 data class Pixel(
